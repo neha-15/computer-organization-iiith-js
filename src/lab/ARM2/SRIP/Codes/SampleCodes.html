@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SampleCodes</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div>
+		<h1 class="elegantshadow"> ARM SIMULATOR</h1>
+	</div>
+	<script type="text/javascript">
+		function fill1(){
+			var text1 =`@ Adding two numbers
+
+	.arm	
+	.data
+	sum: 	.word 
+	num1:	.word 0x0000aaaa
+	num2:	.word 0x0000bbbb
+
+	.text
+	.global main     @ 'main' function is mandatory.
+
+	main:
+	ldr r1, =num1
+	ldr r2, =num2
+    ldr r3, [r1] 
+    ldr r4, [r2] 
+	add r5, r3, r4
+	ldr r6, =sum
+ 	str r5, [r6]	
+`
+ 	document.forms.myform.area.value=text1;
+
+		}
+		function fill2(){
+			var text1 =`@Adding elemnts of an array
+
+	.arm
+
+	.data
+	numarray:	.word 10, 9, 8, 3, 2, 1, 4, 5, 6, 7  
+	sum:		.word 
+
+	.text
+	.global main@ 'main' function is mandatory.
+
+	main:
+     mov r0, #10        @ Set loop counter to 0
+	mov r1, #0         	@ Set initial sum value to 0;  
+	ldr r2, =numarray  	@ r2 = &numarray
+	.Lloop: 
+	ldr r3, [r2], #4  	@ r3 = *r2; r2=r2+4 
+    add r1, r1, r3     	@ sum = sum + numarray[i]
+    subs r0, r0, #1    	@ Decrement loop counter
+    bne .Lloop         	@ Branch back if the loop counter i!=0 
+	ldr r0, =sum       	@ r0 = &sum; Reuse register r0
+    str r1, [r0]       	@ *r0 = r1 (sum = r1) 
+
+`
+ 	document.forms.myform.area.value=text1;
+		}
+		function fill3(){
+			var text1 =`@Forward branch
+
+	.text 
+	.global main
+	main:
+	mov r3, #10
+	mov r4, #11
+	cmp r3, r4
+	ble .Lif
+	sub r0, r1, r2
+	b .Lexit
+	.Lif:  	add r0, r1, r2
+	.Lexit:
+`
+ 	document.forms.myform.area.value=text1;
+		}
+		function fill4(){
+			var text1 =`@Square sum
+
+	.arm
+	.data
+	arraysize:	.word 10
+	array:		.word 1, -2, 3, -4, 5, -6, 8, -7, 9, -10
+	sqrsum:	.word 0
+
+	.text
+	.global main     @ 'main' function is mandatory.
+
+	@ r0 = arraysize; r1 = &array; r3 = sum; r2 = array[i]
+	@ Other Registers Used: r6, r7
+
+	main:
+	ldr r0, =arraysize     @ r0 = &arraysize
+        	ldr r0, [r0]           @ r0 = arraysize. We are immediately reusing r0. 
+       	ldr r1, =array	       @ r1 = &array
+       	mov r3, #0	       @ r3 = 0 (sum = 0)
+	cmp r0, #0    	       @ if (r0 == 0) goto exit; 
+	beq .Lexit	       
+
+	@ We are using r0 as a loop index variable
+
+	.Lloop: ldr r2, [r1], #4	
+	mla r3, r2, r2, r3     	@ r3 = r2*r2+r3 (sum = sum + array[i]*array[i])
+        	subs r0, r0, #1	
+        	bne .Lloop
+	ldr r6, =sqrsum        @ r6 = &sqrsum
+ 	str r3, [r6]           @ *r6 = r3	
+	.Lexit:`
+ 	document.forms.myform.area.value=text1;
+		}
+		function about(){
+			alert("Arm Simulator")
+		}
+	</script>
+	<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">File
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">New</a>
+      <a href="#">Open</a>
+      <a href="#">Save</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Edit
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Undo</a>
+      <a href="#">Redo</a>
+      <a href="#">Select All</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Run
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a onclick="">Assemble</a>
+      <a href="#">Reset</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="dropbtn">Help
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="help.html">Help</a>
+      <a onclick="about()">About</a>
+    </div>
+  </div>
+</div>
+<br>
+	<div>
+	<button onclick='window.location.href="Editor.html"'>Editor </button>
+	<button onclick='window.location.href="Execute.html"'>Execute</button>
+	<button onclick='window.location.href="SampleCodes.html"'>Sample Codes </button>
+	<button onclick='window.location.href="Help.html"'>   Help </button>
+	</div>
+	<br>
+	<div>
+	<button onclick="fill1()">Program 1</button>
+	<button onclick="fill2()">Program 2</button>
+	<button onclick="fill3()">Program 3 </button>
+	<button onclick="fill4()">Program 4</button>
+	</div>
+	<div class="wrapper">
+		<div class="gfg">
+			<form name="myform">
+			<textarea name="area" rows="30" cols="60">
+				
+			</textarea>
+			</form>
+		</div>
+		
+	</div>
+<br>
+	
+	<div>
+		<button>Run Input/Output</button>
+		<button>Simmulator Messages</button>
+		<table border="5" width="100">
+			<tr>
+				<td><button>Clear</button></td>
+				<td><textarea cols="100"></textarea></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quick Tutorial And Guide</title>
+  
+    <link rel="stylesheet" href="./../CSS/QuickTutorial.css">
+
+  </head>
+  <body>
+
+
+
+
+  <div class="nav">
+  <button class = "div1" onclick="openTab('Tab1')">  Decimal to floating point converter </button>
+      <ul>
+          <li>Decimal to 8-Bit Binary Floating point Normalized rep.</li>
+        <li>Enter The Decimal number to be Converted</li>
+        <li>Then Enter The Number of Exp Bits in Range(1,6)</li>
+        <li>Click On Submit To Get Results </li>
+        <li>Click Reset To Clear And Re-enter The Values</li>
+      </ul>
+    <button class="div1"  onclick="openTab('Tab2')"> Floating Point Numbers Analyzer </button>
+
+
+
+<button class="div1"  onclick="openTab('Tab3')">
+    Quick tutorial and Guide.</button>
+
+</div>
+
+
+
+<div class="container">
+
+    <h2 style="border:solid 2px black;color:white;background-color:#626266;margin-left:0px;margin-top:0px; width:120%"> FLOATING POINT NUMBERS REPRESENTATION SIMULATOR</h2>
+
+
+
+
+<div id="Tab3" class="tab">
+  <h3 style="color:#063e99">WHAT ARE FLOATING POINT NUMBERS</h3>
+  <p>As the name implies,floating point numbers are numbers that contain floating decimal points.For example, the numbers 5.5, 0.001, and -2,345.6789 are floating point numbers. Numbers that do not have a decimal places are called integers. Computer recognize real numbers that contain fractions as floating point numbers.When a calculation includes a floating point number, it is called a "floating point calculation". Older computers used to have a separate floating point unit(FPU) that handled these calculations, but now the FPU is typically built into the computer's CPU. </p>
+
+  <h3 style="color:#063e99">FLOATING-POINT FORMAT</h3>
+  <P><img id="img1" src="./../Images/floating_point1.jpg" alt="diagram1" style="float:right;">Computers store floating point numbers in a specific format. As our aim is to maximize the range of numbers that can be stored.FPUs typically represents real numbers in a binary floating-point format. In this format, a real number has three parts: a sign, a significand, and an exponent. The folowing explaination is in accordance with the standard IEEE format of 32 bit representation. </p>
+<div id="div2"> <img id="img2" src="./../Images/floating_point2.jpg" alt="diagram2" style="float: left">
+
+<h3 style="color:#063e99">SIGN BIT</h3>
+<ul style="list-style-type: none">
+  <li> -> 1-Bit Long</li>
+  <li> -> Determines the +ve or -ve number</li>
+  <li>  -> 1 = -ve Number  0 = +ve Number</li>
+</ul>
+</div>
+<div id="div3">
+  <div id="d1">
+    <h3 style="color:#063e99;margin-left: 5%;">EXPONENT FIELD</h3>
+    <ul style="list-style-type: none">
+      <li> -> 8 Bits Long</li>
+      <li>-> Determines The Range Of Numbers That Can be Represented</li>
+      <li> ->Increasing The Bits Will Increase The Range, Not Precision</li>
+      <li> -> To Cover For -ve Numbers, exp = 127 + real exp</li>
+
+    </ul>
+  </div>
+  <div id="d2">
+    <h3 style=" color:#063e99; margin-left: 5%;">MANTISSA FIELD</h3>
+
+    <ul style="list-style-type: none">
+      <li> -> 23 Bits Long</li>
+      <li>-> Determines The precision of Numbers</li>
+      <li> -> Increasing The Bits Will Increase The Precision, Not Range</li>
+      <li> -> More bits...More The Accuracy</li>
+
+    </ul>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+  </body>
+</html>

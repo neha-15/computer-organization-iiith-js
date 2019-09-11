@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Execute</title>
+    <script src="execute.js"></script>
+</head>
+<body>
+    <div>
+        <h1 class="elegantshadow"> ARM SIMULATOR</h1>
+    </div>
+    <div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">File
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Editor.html">New</a>
+      <a href="#">Open</a>
+      <a href="#">Save</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Edit
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Undo</a>
+      <a href="#">Redo</a>
+      <a href="#">Select All</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Run
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a>Assemble</a>
+      <a href="#">Reset</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="dropbtn">Help
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="help.html">Help</a>
+      <a onclick="about()">About</a>
+    </div>
+  </div>
+</div>
+<br>
+	<div>
+	<button onclick='window.location.href="Editor.html"'>Editor </button>
+	<button onclick='window.location.href="Execute.html"'>Execute</button>
+	<button onclick='window.location.href="SampleCodes.html"'>Sample Codes </button>
+	<button onclick='window.location.href="Help.html"'>   Help </button>
+	</div>
+	<br><br>
+ 	<div class="wrapper">
+ 	<div class="nested gfg">
+    	<table id="text_table" width= "100%">
+        	
+                <tr>
+                    <th>Bkpt</th>
+                    <th>Address</th>
+                    <th>Source</th>
+                </tr>
+            
+    	</table>
+        </div>
+    <div class="box2">
+      <table align="center">
+      	<tr>
+      		<td ><button class="btn" >Step</button></td>
+      	
+      		
+      	</tr>
+      	<tr>
+      		<td><button class="btn" onclick='akhiltopper()'>Run</button></td>
+      	</tr>
+      </table>
+  </div>
+
+    <div style="grid-column: 3;
+  grid-row: 1;">
+    <table id="register_table" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>$r0</td>
+                    <td>0</td>
+                    <td id="$r0">0</td>
+                </tr>
+                <tr>
+                    <td>$r1</td>
+                    <td>0</td>
+                    <td id="$r1">0</td>
+                </tr>
+                <tr>
+                    <td>$r2</td>
+                    <td>0</td>
+                    <td id="$r2">0</td>
+                </tr>
+                <tr>
+                    <td>$r3</td>
+                    <td>0</td>
+                    <td id="$r3">0</td>
+                </tr>
+                <tr>
+                    <td>$r4</td>
+                    <td>0</td>
+                    <td id="$r4">0</td>
+                </tr>
+                <tr>
+                    <td>$r5</td>
+                    <td>0</td>
+                    <td id="$r5">0</td>
+                </tr>
+                <tr>
+                    <td>$r6</td>
+                    <td>0</td>
+                    <td id="$r6">0</td>
+                </tr>
+                <tr>
+                    <td>$r7</td>
+                    <td>0</td>
+                    <td id="$r7">0</td>
+                </tr>
+                <tr>
+                    <td>$r8</td>
+                    <td>0</td>
+                    <td id="$r8">0</td>
+                </tr>
+                <tr>
+                    <td>$r9</td>
+                    <td>0</td>
+                    <td id="$r9">0</td>
+                </tr>
+                <tr>
+                    <td>$r10</td>
+                    <td>0</td>
+                    <td id="$r10">0</td>
+                </tr>
+                <tr>
+                    <td>$r11</td>
+                    <td>0</td>
+                    <td id="$r11">0</td>
+                </tr>
+                <tr>
+                    <td>$r12</td>
+                    <td>0</td>
+                    <td id="$r12">0</td>
+                </tr>
+                <tr>
+                    <td>$r13</td>
+                    <td>0</td>
+                    <td id="$r13">0x10100000</td>
+                </tr>
+                <tr>
+                    <td>$r14</td>
+                    <td>0</td>
+                    <td id="$r14">0</td>
+                </tr>
+                <tr>
+                    <td>$r15</td>
+                    <td>0</td>
+                    <td id="$r15">0x4000000</td>
+                </tr>
+                <tr>
+                    <td>$r16</td>
+                    <td>0</td>
+                    <td id="$r16">0xffffffff</td>
+                </tr>
+            </table>
+
+    </div>
+    <div  class="ds dsc">
+     
+    <img src="https://image.flaticon.com/icons/png/512/226/226777.png" alt="logo" width="15em" height="15em"style="background-color: white;border: 1px solid black;">
+            Data Segment
+            <table id="data_table" style="visibility:hidden;">
+                <tr>
+                    <th>Address</th>
+                    <th>Value(+0)</th>
+                    <th>Value(+4)</th>
+                    <th>Value(+8)</th>
+                    <th>Value(+16)</th>
+                    <th>Value(+20)</th>
+                </tr>
+                <tr>
+                    <td>10000000</td>
+                    <td>0xa</td>
+                    <td>0x8</td>
+                    <td>0x9</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000018</td>
+                    <td>0</td>
+                    <td>0x7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000030</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000048</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000060</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000078</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000090</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>100000a8</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>100000c0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>100000d8</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1000000f0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000108</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000120</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000138</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10000150</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+
+            </table>
+ 		
+ 	</div><br>
+<div style="grid-column: 1/3;">
+		<button>Run Input/Output</button>
+		<button>Simmulator Messages</button>
+		<table border="5" width="100">
+			<tr>
+				<td><button>Clear</button></td>
+				<td><textarea id="com_mes" cols="100"></textarea></td>
+			</tr>
+		</table>
+</div>
+</body>
+</html>

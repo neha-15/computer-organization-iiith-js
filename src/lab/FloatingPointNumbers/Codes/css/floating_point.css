@@ -1,0 +1,210 @@
+   body{
+     font-size: 18px;
+     height:830px;
+
+   }
+
+  input{
+    height: 35px;
+    text-align: center;
+    width: 160px;
+    font-size: 18px;
+  }
+
+  .nav{
+    border: 2px solid black;
+    float: left; 
+    width: 12%;
+    height: 830px;
+    background: #626266;
+    color: white;
+   }
+  #ul1 {
+   font-size : 18px;
+   list-style: none;
+  }
+  #ul1 li::before {
+   content: "\2022";
+   color:red;
+   margin-left: -1em;
+   font-weight: bold;
+   font-size: 40px;
+   display: inline-block;
+   width: 1em;
+  }
+
+  .div1{
+    background-color: #b4bbc6;
+    color: white;
+    width: 220px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .div1:hover {
+    color:black;
+   }
+.div1:target {
+ background-color: #f4b001;
+ }
+   
+  .container{
+    margin-top: 0px;
+    float: left;
+    width: 70%;
+    height: 750px;
+  }
+
+  #Tab3{
+  margin-left: 40px;
+  margin-top:  40px;
+  width: 110%;
+ }
+
+  #img1{
+  height: 100px;
+  width: 300px;
+  margin-left: 30px;
+  }
+  #img2{
+  height: 80px;
+  width: 380px;
+  margin-left: 50px;
+  margin-right: 300px;
+  }
+  #div2{
+  margin-top: 60px;
+  }
+  #div3{
+  margin: 30px;
+  position: absolute;
+
+  width:80%;
+  height:30%;
+  }
+ 
+  #d1{
+  float: left;
+  width: 40%;
+  height: 80%;
+
+  }
+  #d2{
+  float: right;
+  width: 50%;
+  height: 80%;
+
+  }
+   #upper_part{
+    margin-left: 35px;
+    margin-top: 35px;
+  }
+
+  #lower_part{
+    position: relative;
+    background-color: #b9b2bb;
+    padding-top: 10px;
+    padding-left: 30px;
+    margin: 20px;
+    height: 550px;
+    font-weight: bold;
+    width: 1500px;
+    visibility: hidden;
+  }
+  #absolute1{
+
+    position: absolute;
+    top: 145px;
+
+    height: 30px;
+    width: 900px;
+    font-size:25px;
+    padding-left: 2px;
+    padding-right: 0px;
+  }
+
+  .abc{
+    background: #aec3e5;
+    border: black 2px solid;
+  }
+
+  .xyz{
+    background: #aec3e5;
+    border: black 2px solid;
+    width: 120px;
+    margin-left: 15px;
+  }
+
+  #absolute2{
+    right: 20px;
+    padding: 5px;
+    top: 170px;
+    border: 2px black solid;
+    background-color: white;
+    height: 340px;
+    width: 630px;
+    position: absolute;
+  }
+
+  .inner1{
+    display: inline-table;
+  }
+  #table1{
+    height : 45px;
+    width: 380px;
+  }
+
+  table{
+    border-collapse: collapse;
+    text-align: center;
+  }
+  table,th{
+  border: black 2px solid;
+  }
+  #Tab2 {
+  width: 120%;
+
+ }
+
+  #one {
+  width: 700px ;
+  float: left;
+  height : 80%;
+  padding-left: 30px;
+ }
+  #two {
+  width: 700px ;
+  float:left;
+  height : 80%;
+ }
+  #table2{
+  margin-left : 20px;
+  height:650px;
+  width:700px;
+ }
+  #table2,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-top: 4px;
+  padding-bottom: 4px;
+ }
+ #table2
+ {
+ th{
+   padding: 6px;
+  }
+ }
+ #ul2 {
+ list-style: none;
+ font-size: 18px;
+ font-weight:600;
+}
+ #ul2 li::before {
+ content: "\2022";
+ color:pink;
+ display:inline-block;
+ font-size: 40px;
+ width: 0.5em;
+ margin-left: -1em;
+
+}

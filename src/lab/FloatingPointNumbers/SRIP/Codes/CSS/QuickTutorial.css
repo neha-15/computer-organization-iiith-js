@@ -1,0 +1,75 @@
+
+body{
+
+height:700px;
+}
+
+     .nav{
+    border: 2px solid black;
+    float: left; 
+    width: 10%;
+    height: 750px;
+    background: #626266;
+    color: white;
+    padding: 2%;
+  }
+
+    .div1{
+      background-color: pink;
+    }
+
+
+
+    .container {
+      margin-top:0px;
+      float: left;
+        width: 70%;
+      height: 100%;
+
+    }
+    
+
+
+#Tab3{
+  margin-left: 40px;
+  margin-top:  40px;
+  width: 110%;
+}
+#img1{
+  height: 100px;
+  width: 300px;
+  margin-left: 30px;
+
+}
+#img2{
+  height: 80px;
+  width: 380px;
+  margin-left: 50px;
+  margin-right: 300px;
+}
+#div2{
+  margin-top: 60px;
+}
+#div3{
+  margin: 30px;
+  position: absolute;
+
+  width:80%;
+  height:30%;
+}
+#div3 > div{
+
+}
+
+#d1{
+  float: left;
+  width: 40%;
+  height: 80%;
+
+}
+#d2{
+  float: right;
+  width: 50%;
+  height: 80%;
+
+}

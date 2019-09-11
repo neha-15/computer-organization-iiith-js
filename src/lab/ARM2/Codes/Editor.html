@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="execute.js"></script>
+</head>
+
+<!-- <script src="abc.js"></script> -->
+<body>
+	<!--<ul>
+		<li><a class="active" href="#home">File</a></li>
+		<li><a href="#news">News</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#about">About</a></li>
+	</ul>-->
+	<div>
+		<h1 class="elegantshadow"> ARM SIMULATOR</h1>
+	</div>
+	<br>
+	<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">File
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Editor.html">New</a>
+      <a href="#">Open</a>
+      <a href="#">Save</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Edit
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Undo</a>
+      <a href="#">Redo</a>
+      <a href="#">Select All</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Run
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Execute.html" onclick="badoom()">Assemble</a>
+      <a href="#">Reset</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="dropbtn">Help
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="help.html">Help</a>
+      <a onclick="about()">About</a>
+    </div>
+  </div>
+</div>
+
+	<br>
+	<button onclick='window.location.href="Editor.html"'>Editor </button>
+	<button onclick='window.location.href="Execute.html"'>Execute</button>
+	<button onclick='window.location.href="SampleCodes.html"'>Sample Codes </button>
+	<button onclick='window.location.href="Help.html"'>   Help </button>
+	<br><br><br>
+	<textarea id="ta" rows="30" cols="60"></textarea>
+	<br>
+	<footer>
+		<button>Run Input/Output</button>
+		<button>Simmulator Messages</button>
+		<table border="5" width="100">
+			<tr>
+				<td><button>Clear</button></td>
+				<td><textarea cols="100"></textarea></td>
+			</tr>
+		</table>
+	</footer>
+	</body>
+</html>
